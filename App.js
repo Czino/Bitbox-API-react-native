@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Text, SafeAreaView } from 'react-native'
 import { useEffect } from 'react'
-const { BitBox02API, getDevicePath } = require('bitbox02-api')
+import { BitBox02API, getDevicePath } from 'bitbox02-api'
 
 const App = () => {
   const [bitBoxLoaded, setBitBoxLoaded] = useState(false)
