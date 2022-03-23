@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Text, SafeAreaView } from 'react-native'
 import { useEffect } from 'react'
 import { BitBox02API, getDevicePath } from 'bitbox02-api'
-
 const App = () => {
   const [bitBoxLoaded, setBitBoxLoaded] = useState(false)
   const [error, setError] = useState('')
@@ -19,11 +18,6 @@ const App = () => {
       }
     })()
   }, [])
-
-  ErrorUtils.setGlobalHandler(err => {
-    console.error(err)
-    setError(err.message)
-  })
 
   return <SafeAreaView style={{padding: 16}}>
       <Text>Hello Bitbox!</Text>
